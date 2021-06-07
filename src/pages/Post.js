@@ -2,12 +2,6 @@ import React, { Component } from "react";
 
 import { addPost, authenticate } from "../utils/realm";
 
-import * as Realm from "realm-web";
-const app = new Realm.App({id: "blog-ovrfr"});
-const creds = Realm.Credentials.anonymous();
-let mongodb = app.currentUser.mongoClient("mongodb-atlas");
-let blog = mongodb.db("blog").collection("blog");
-
 class Post extends Component {
     constructor(props) {
         super(props);
